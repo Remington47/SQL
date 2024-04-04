@@ -1,0 +1,33 @@
+-- Create table for student information
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Grade INT,
+    Age INT,
+    Gender VARCHAR(10),
+    Address VARCHAR(100)
+);
+
+-- Create table for teacher information
+CREATE TABLE Teachers (
+    TeacherID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Subject VARCHAR(100),
+    Age INT,
+    Gender VARCHAR(10),
+    Address VARCHAR(100)
+);
+
+-- Add a student
+INSERT INTO Students (StudentID, Name, Grade, Age, Gender, Address)
+VALUES (1, 'Alice', 10, 15, 'Female', '123 Main St');
+
+-- Add a teacher
+INSERT INTO Teachers (TeacherID, Name, Subject, Age, Gender, Address)
+VALUES (101, 'Mr. Smith', 'Math', 35, 'Male', '456 Oak St');
+
+-- Query the student list of a grade
+SELECT * FROM Students WHERE Grade = 10;
+
+-- Query the teacher list who teaches a subject
+SELECT * FROM Teachers WHERE Subject = 'Math';
